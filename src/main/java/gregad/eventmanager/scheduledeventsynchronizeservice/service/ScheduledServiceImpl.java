@@ -1,6 +1,7 @@
 package gregad.eventmanager.scheduledeventsynchronizeservice.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import gregad.event_manager.loggerstarter.aspect.DoLogging;
 import gregad.eventmanager.scheduledeventsynchronizeservice.dao.EventDao;
 import gregad.eventmanager.scheduledeventsynchronizeservice.model.EventEntity;
 import gregad.eventmanager.scheduledeventsynchronizeservice.security.token_service.TokenHolderService;
@@ -23,6 +24,7 @@ import java.util.List;
  * @author Greg Adler
  */
 @Service
+@DoLogging
 public class ScheduledServiceImpl implements ScheduledService {
     private TokenHolderService tokenHolderService;
     private EventDao eventRepo;
